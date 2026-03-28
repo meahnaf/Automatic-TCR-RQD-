@@ -1,0 +1,149 @@
+{
+  "source": "1.png",
+  "run_length_cm": 150.0,
+  "n_runs": 7,
+  "scale": {
+    "px_per_cm": 9.1,
+    "method": "alternating_blocks",
+    "confidence": 0.7
+  },
+  "summary": {
+    "avg_tcr": 76.84,
+    "avg_rqd": 75.67,
+    "total_pieces": 26,
+    "rqd_class": "Good"
+  },
+  "runs": [
+    {
+      "run": 1,
+      "lengths_cm": [
+        40.24,
+        6.71,
+        41.58,
+        19.67,
+        13.86
+      ],
+      "metrics": {
+        "tcr": 81.37,
+        "rqd": 76.9,
+        "total_length": 122.06,
+        "rqd_length": 115.35,
+        "n_pieces": 5,
+        "n_rqd_pieces": 4,
+        "run_length_cm": 150.0,
+        "rqd_class": "Good"
+      }
+    },
+    {
+      "run": 2,
+      "lengths_cm": [
+        65.28,
+        24.37,
+        19.67,
+        5.59
+      ],
+      "metrics": {
+        "tcr": 76.6,
+        "rqd": 72.88,
+        "total_length": 114.9,
+        "rqd_length": 109.31,
+        "n_pieces": 4,
+        "n_rqd_pieces": 3,
+        "run_length_cm": 150.0,
+        "rqd_class": "Fair"
+      }
+    },
+    {
+      "run": 3,
+      "lengths_cm": [
+        89.64,
+        38.23
+      ],
+      "metrics": {
+        "tcr": 85.25,
+        "rqd": 85.25,
+        "total_length": 127.87,
+        "rqd_length": 127.87,
+        "n_pieces": 2,
+        "n_rqd_pieces": 2,
+        "run_length_cm": 150.0,
+        "rqd_class": "Good"
+      }
+    },
+    {
+      "run": 4,
+      "lengths_cm": [
+        42.47,
+        19.45,
+        13.86,
+        45.83
+      ],
+      "metrics": {
+        "tcr": 81.07,
+        "rqd": 81.07,
+        "total_length": 121.61,
+        "rqd_length": 121.61,
+        "n_pieces": 4,
+        "n_rqd_pieces": 4,
+        "run_length_cm": 150.0,
+        "rqd_class": "Good"
+      }
+    },
+    {
+      "run": 5,
+      "lengths_cm": [
+        53.65,
+        16.1,
+        10.95,
+        23.92
+      ],
+      "metrics": {
+        "tcr": 69.75,
+        "rqd": 69.75,
+        "total_length": 104.62,
+        "rqd_length": 104.62,
+        "n_pieces": 4,
+        "n_rqd_pieces": 4,
+        "run_length_cm": 150.0,
+        "rqd_class": "Fair"
+      }
+    },
+    {
+      "run": 6,
+      "lengths_cm": [
+        58.79,
+        44.93
+      ],
+      "metrics": {
+        "tcr": 69.15,
+        "rqd": 69.15,
+        "total_length": 103.73,
+        "rqd_length": 103.73,
+        "n_pieces": 2,
+        "n_rqd_pieces": 2,
+        "run_length_cm": 150.0,
+        "rqd_class": "Fair"
+      }
+    },
+    {
+      "run": 7,
+      "lengths_cm": [
+        19.45,
+        30.18,
+        10.73,
+        39.79,
+        11.85
+      ],
+      "metrics": {
+        "tcr": 74.66,
+        "rqd": 74.66,
+        "total_length": 112.0,
+        "rqd_length": 112.0,
+        "n_pieces": 5,
+        "n_rqd_pieces": 5,
+        "run_length_cm": 150.0,
+        "rqd_class": "Fair"
+      }
+    }
+  ]
+}
