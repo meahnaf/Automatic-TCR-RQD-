@@ -27,8 +27,8 @@ Thumbs.db
 # Outputs (large generated files)
 outputs/
 
-# Data (large image files)
-data/
+# Data (keep sample images for demo)
+# data/
 
 # Empty folders
 New folder/
