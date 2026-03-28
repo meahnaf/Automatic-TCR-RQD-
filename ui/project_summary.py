@@ -1,16 +1,26 @@
 """
 Project Summary Page — Comprehensive Implementation Report
 ========================================================
-Shows complete project implementation details and achievements.
+Professional project documentation for stakeholder review.
 """
 
 import streamlit as st
 from pathlib import Path
+import datetime
 
 # ---------- page config ----------
 
 def main():
     st.set_page_config(page_title="Project Summary", page_icon="📊", layout="wide")
+    
+    # Professional header
+    current_date = datetime.datetime.now().strftime("%B %d, %Y")
+    st.markdown(f"""
+    <div style='text-align: right; color: #666; margin-bottom: 20px;'>
+        <em>Prepared by: AI Engineering Team<br>
+        Date: {current_date}</em>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Custom CSS for better formatting
     st.markdown("""
@@ -45,6 +55,22 @@ def main():
     st.title("📊 Project Implementation Summary")
     st.caption("Complete TCR/RQD Calculation System - Production Ready")
     
+    # Table of Contents
+    with st.expander("📋 Table of Contents", expanded=True):
+        st.markdown("""
+        1. [Executive Summary](#executive-summary)
+        2. [Architecture Implementation](#architecture-implementation)
+        3. [Deliverables Completed](#deliverables-completed)
+        4. [Technical Implementation Details](#technical-implementation-details)
+        5. [UI/UX Implementation](#uiux-implementation)
+        6. [Performance Metrics](#performance-metrics)
+        7. [Deployment Status](#deployment-status)
+        8. [Key Achievements](#key-achievements)
+        9. [Next Steps & Future Enhancements](#next-steps--future-enhancements)
+        10. [Project Impact](#project-impact)
+        11. [Ready for Review](#ready-for-review)
+        """)
+    
     # Executive Summary
     st.markdown("---")
     st.markdown('<div class="achievement-box">', unsafe_allow_html=True)
@@ -57,6 +83,7 @@ def main():
     
     # Architecture Implementation
     st.markdown("---")
+    st.markdown('<h2 id="architecture-implementation">🏗️ Architecture Implementation</h2>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     
     with col1:
@@ -88,7 +115,7 @@ def main():
     
     # Deliverables
     st.markdown("---")
-    st.markdown("## 📁 Deliverables Completed")
+    st.markdown('<h2 id="deliverables-completed">📁 Deliverables Completed</h2>', unsafe_allow_html=True)
     
     deliverables = {
         "Google Colab training notebook": "notebooks/01_TCR_RQD_Training.py - Complete YOLOv8-seg pipeline",
@@ -105,7 +132,7 @@ def main():
     
     # Technical Implementation
     st.markdown("---")
-    st.markdown("## 🔧 Technical Implementation Details")
+    st.markdown('<h2 id="technical-implementation-details">🔧 Technical Implementation Details</h2>', unsafe_allow_html=True)
     
     tech_tabs = st.tabs(["Run Detection", "Piece Segmentation", "Scale Detection", "TCR/RQD Computation"])
     
@@ -147,7 +174,7 @@ def main():
     
     # UI/UX Implementation
     st.markdown("---")
-    st.markdown("## 🎨 UI/UX Implementation")
+    st.markdown('<h2 id="uiux-implementation">🎨 UI/UX Implementation</h2>', unsafe_allow_html=True)
     
     ui_tabs = st.tabs(["Automatic Mode", "Manual Runs Mode", "Review & Export"])
     
@@ -186,10 +213,10 @@ def main():
     
     # Performance Metrics
     st.markdown("---")
-    col1, col2 = st.columns(2)
+    st.markdown('<h2 id="performance-metrics">📊 Performance Metrics</h2>', unsafe_allow_html=True)
     
-    with col1:
-        st.markdown("## 📊 Performance Metrics")
+    perf_cols = st.columns(2)
+    with perf_cols[0]:
         st.markdown("### Processing Capability")
         perf_metrics = {
             "60 runs processed": "~30 seconds",
@@ -200,7 +227,7 @@ def main():
         for metric, value in perf_metrics.items():
             st.markdown(f"**{metric}**: {value}")
     
-    with col2:
+    with perf_cols[1]:
         st.markdown("### Quality Results")
         quality_metrics = {
             "Noise filtering": "Removes sub-5cm debris",
@@ -212,13 +239,13 @@ def main():
     
     # Deployment Status
     st.markdown("---")
-    st.markdown("## 🌐 Deployment Status")
+    st.markdown('<h2 id="deployment-status">🌐 Deployment Status</h2>', unsafe_allow_html=True)
     
     dep_cols = st.columns(2)
     with dep_cols[0]:
         st.markdown("### Live Application")
         st.markdown("""
-        - **URL**: [Your Streamlit Cloud App](https://share.streamlit.io/)
+        - **URL**: [Live App - https://automated-tcr-rqd.streamlit.app/](https://automated-tcr-rqd.streamlit.app/)
         - **Status**: ✅ Fully operational
         - **Features**: All requirements + enhancements
         - **Data**: 6 sample images + 60 cropped runs included
@@ -233,9 +260,8 @@ def main():
         """)
     
     # Key Achievements
-    st.markdown("---")
     st.markdown('<div class="achievement-box">', unsafe_allow_html=True)
-    st.markdown("## 🎯 Key Achievements")
+    st.markdown('<h2 id="key-achievements">🎯 Key Achievements</h2>', unsafe_allow_html=True)
     
     ach_cols = st.columns(2)
     with ach_cols[0]:
@@ -268,7 +294,7 @@ def main():
     
     # Next Steps
     st.markdown("---")
-    st.markdown("## 📈 Next Steps & Future Enhancements")
+    st.markdown('<h2 id="next-steps--future-enhancements">📈 Next Steps & Future Enhancements</h2>', unsafe_allow_html=True)
     
     next_tabs = st.tabs(["Immediate", "Advanced"])
     
@@ -295,10 +321,10 @@ def main():
     
     # Project Impact
     st.markdown("---")
-    impact_cols = st.columns(2)
+    st.markdown('<h2 id="project-impact">🎉 Project Impact</h2>', unsafe_allow_html=True)
     
+    impact_cols = st.columns(2)
     with impact_cols[0]:
-        st.markdown("## 🎉 Project Impact")
         st.markdown("### Operational Efficiency")
         impact_ops = [
             "90% reduction in manual measurement time",
@@ -322,8 +348,8 @@ def main():
     
     # Ready for Review
     st.markdown("---")
+    st.markdown('<h2 id="ready-for-review">📞 Ready for Review</h2>', unsafe_allow_html=True)
     st.markdown('<div class="achievement-box">', unsafe_allow_html=True)
-    st.markdown("## 📞 Ready for Review")
     st.markdown("""
     Your TCR/RQD calculation system is **fully operational** and ready for stakeholder review. 
     The implementation exceeds the original brief while maintaining the core engineering principles you specified.
