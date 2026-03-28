@@ -93,7 +93,7 @@ st.set_page_config(page_title="TCR / RQD Calculator", page_icon="🪨", layout="
 
 # Page navigation
 st.sidebar.title("🧭 Navigation")
-page = st.sidebar.radio("Select Mode", ["🤖 Automatic Mode", "✂️ Manual Runs Mode"])
+page = st.sidebar.radio("Select Mode", ["🤖 Automatic Mode", "✂️ Manual Runs Mode", "📊 Project Summary"])
 
 if page == "✂️ Manual Runs Mode":
     # Import and run manual runs page
@@ -102,6 +102,15 @@ if page == "✂️ Manual Runs Mode":
     manual_runs = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(manual_runs)
     manual_runs.main()
+    st.stop()
+
+if page == "📊 Project Summary":
+    # Import and run project summary page
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("project_summary", os.path.join(os.path.dirname(__file__), "project_summary.py"))
+    project_summary = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(project_summary)
+    project_summary.main()
     st.stop()
 
 # Automatic Mode (existing code)
